@@ -1,0 +1,210 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+section{
+    position:relative; 
+    width: var(--section-width);
+    margin: 0 auto; /* can giữa */
+}
+:root{ /* biến */
+    --container-width: 1150px;
+    --section-width: 980px;
+    --color-darkblue: #112141 ;
+    --color-orange:#BA9066; 
+    --color-darkred: #B70F0B;
+    --color-gray: #646464;
+}
+body{
+    min-height: 1200px;
+    background-image:url("/images/bg-top.jpg"),  url("/images/bg-bottom.jpg"); /* Gắn ảnh nền */
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center,bottom center;
+    background-color: #F2F2F2;
+}
+a{
+    text-decoration: none; /* Bỏ dấu gạch chân dưới chữ  */
+}
+a:hover{
+    opacity: 0,8; /* trỏ chuột vào phần tử nào của thẻ a thì tăng độ trong suốt cua phần tử đó */
+}
+.container{
+    position: relative; 
+    width: var(--container-width);
+    margin: 0 auto;
+    overflow: auto;/* chống tràn  */
+}
+#header{
+    position: relative;
+    width: var(--section-width);
+    margin: 0 auto;
+    overflow: auto;
+}
+#menu{
+    display: flex; /* Đẩy cùng một hàng */
+    justify-content: space-between; /* giãn đều trên hàng */
+    margin-top: 20px;
+
+}
+#menu.space{
+    width: 200px !important;
+}
+#menu a{
+    color: #fff;
+    font-family: Cambria;
+    font-size: 1.1em;
+}
+#menu > li{
+    border-left: 1px solid rgba(255,255,255,0.5);
+    padding: 0 0 0 20px;
+}
+#menu > li:first-child
+{
+    border-left: 0;
+}
+#section-1{
+    margin-top: 450px;
+    display: grid;
+    grid-template-columns: 240px 490px 250px; /* Độ rộng của 3 cột */
+    column-gap:8px;
+    border: 3px solid var(--color-darkblue);
+    background: var(--color-darkblue);
+}
+#long-den{
+    position: absolute;
+    top: 0;
+    left: -80px;
+    z-index: 999;
+}
+.left-buttons{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 125px 62px 62px;
+    row-gap: 2px;
+}
+#tai-game{
+    background-image: url("/images/btn_taigame.jpg");
+    background-repeat: no-repeat;
+}
+#dang-ky, #nap-the{
+    background-image: url("/images/buttons-left.png") ;
+}
+
+#dang-ky{
+    background-position: 0 -2px;
+}
+#dang-ky:hover{
+    background-position: -248px -2px;
+}
+#nap-the{
+    background-position: 0 -66px;
+}
+#nap-the:hover{
+    background-position: -248px -66px;
+}
+.right-buttons{
+    display:grid;
+    grid-template-columns: 113px auto;
+    grid-template-rows: 103px 103px 38px;
+    gap: 3px;
+}
+#giang-ho,
+#ho-tro,
+#nap-vang,
+#nap-vip{
+ background-image: url("/images/buttons-right.png");
+ background-repeat: no-repeat;
+}
+#giang-ho{
+    background-position: 0 -8px;
+}
+#ho-tro{
+    background-position: -118px -8px;
+}
+#nap-vang{
+    background-position: 0 -120px;
+}
+#nap-vip{
+    background-position: -118px -120px;
+}
+#hotline{
+    background-image: url("/images/hotline.png");
+    grid-column: 1/3;
+    background-repeat: no-repeat;
+}
+#section-2{
+    display: grid;
+    grid-template-columns: 740px 250px;
+    gap: 8px;
+}
+
+#section-2-right-buttons{
+    display: grid;
+    grid-template-columns: 228px;
+    grid-template-rows: repeat(5,45px);
+    row-gap: 5px; /* khoảng cách của từng hàng */
+    background-color: var(--color-darkblue);
+}
+
+#section-2-right-buttons >a{
+    display: grid;
+    background-image: url("/images/links-right.png");
+    background-repeat: no-repeat;
+    row-gap: 5px;
+    grid-template-columns: 20px;
+    
+}
+
+.section-2-top-buttons >a{
+   background-image: url("/images/cuuamlenh-vip-giftcode.png");
+   background-repeat: no-repeat;
+}
+#section-2-top-buttons{
+    display: grid;
+    grid-template-columns: 20px;
+    grid-template-rows: repeat(5,15px);
+    row-gap: 5px;
+    background-image: url("/images/cuuamlenh-vip-giftcode.png");
+    background-repeat: no-repeat;   
+}
+.post{
+    background-color: var(--color-darkblue);
+    background-image: url('/images/news-header-bg.png');
+    background-repeat: no-repeat;
+}
+.post-category{
+    display: flex; /* Đẩy cùng một hàng */
+    justify-content: space-between; /* giãn đều trên hàng */
+    margin: auto;
+    list-style: none;
+    font-family: Cambria;
+    
+}
+.post-body{
+    background-color: white;
+    width: 90%;
+    height: 680px;
+    margin: 0 auto;
+    overflow: auto;/* chống tràn  */
+    display: block;
+   
+}
+#bao-dien{
+    background-position: 0 -4px;
+}
+#mon-phai{
+    background-position: 0 -65px ;
+}
+#tan-thu{
+    background-position: 0 -120px;
+}
+#vo-hoc{
+    background-position: 0 -175px;
+}
+#pvc-pet{
+    background-position: 0 -225px;
+}
+    
